@@ -1,0 +1,18 @@
+<template>
+  <div>
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+      <li>
+        <a href="#!">First Sidebar Link</a>
+      </li>
+      <li>
+        <a href="#!">Second Sidebar Link</a>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<style lang="scss">
+.sidenav {
+  margin-top: 64px;
+}
+</style>
