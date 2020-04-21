@@ -10,9 +10,3 @@
     </ul>
   </div>
 </template>
-
-<style lang="scss">
-.sidenav {
-  margin-top: 64px;
-}
-</style>

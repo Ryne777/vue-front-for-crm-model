@@ -1,18 +1,22 @@
 <template>
   <div class="main-layout">
-    <NavBar></NavBar>
-    <SideBar></SideBar>
-    <main class="container main">
+    <header>
+      <NavBar></NavBar>
+      <SideBar></SideBar>
+    </header>
+    <main class="container">
       <router-view />
     </main>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import SideBar from "@/components/app/SideBar";
 import NavBar from "../components/app/NavBar";
+import Footer from "../components/app/Footer";
 export default {
   name: "main-layout",
-  components: { SideBar, NavBar }
+  components: { SideBar, NavBar, Footer }
 };
 </script>

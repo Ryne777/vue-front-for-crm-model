@@ -9,6 +9,12 @@ const routes = [
     name: "Home",
     meta: { layout: "main" },
     component: () => import("../views/Main.vue")
+  },
+  {
+    path: "/account/:url",
+    name: "account-detail",
+    meta: { layout: "main" },
+    component: () => import("../views/AccountDetail.vue")
   }
 ];
 
