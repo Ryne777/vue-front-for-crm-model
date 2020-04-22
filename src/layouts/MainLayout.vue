@@ -17,6 +17,6 @@ import NavBar from "../components/app/NavBar";
 import Footer from "../components/app/Footer";
 export default {
   name: "main-layout",
-  components: { SideBar, NavBar, Footer }
+  components: { NavBar, Footer, SideBar }
 };
 </script>

@@ -15,6 +15,26 @@ export default {
         url: "url1"
       },
       {
+        title: "главный",
+        amount: 1234.6,
+        url: "url1"
+      },
+      {
+        title: "ads",
+        amount: 12434.6,
+        url: "url2"
+      },
+      {
+        title: "главный",
+        amount: 1234.6,
+        url: "url1"
+      },
+      {
+        title: "ads",
+        amount: 12434.6,
+        url: "url2"
+      },
+      {
         title: "ads",
         amount: 12434.6,
         url: "url2"

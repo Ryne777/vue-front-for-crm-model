@@ -6,8 +6,3 @@ main {
     min-height: 100vh;
     flex-direction: column;
 }
-
-
-.sidenav {
-    margin-top: 64px;
-}
