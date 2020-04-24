@@ -8,7 +8,7 @@
         <a href="#!">Second Sidebar Link</a>
       </li>
     </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large">
+    <a href="#" data-target="slide-out" class="sidenav-trigger side-icon">
       <!--  eslint-disable-next-line prettier/prettier -->
       <i style="padding-left: 20px; padding-top: 10px" class="material-icons">arrow_forward</i>
     </a>

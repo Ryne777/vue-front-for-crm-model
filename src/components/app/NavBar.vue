@@ -3,7 +3,7 @@
     <nav>
       <div class="nav-wrapper">
         <a href="#" class="brand-logo center">Logo</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger right">
           <i class="material-icons">menu</i>
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">

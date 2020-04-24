@@ -1,46 +1,24 @@
 <template>
   <div>
     <Account :accounts="accounts"></Account>
+    <Currency :rates="currency.rates" :date="currency.date"></Currency>
   </div>
 </template>
 
 <script>
 import Account from "../components/Account";
+import Currency from "../components/Currency";
 export default {
   data: () => ({
-    accounts: [
-      {
-        title: "главный",
-        amount: 1234.6,
-        url: "url1"
-      },
-      {
-        title: "главный",
-        amount: 1234.6,
-        url: "url1"
-      },
-      {
-        title: "ads",
-        amount: 12434.6,
-        url: "url2"
-      },
-      {
-        title: "главный",
-        amount: 1234.6,
-        url: "url1"
-      },
-      {
-        title: "ads",
-        amount: 12434.6,
-        url: "url2"
-      },
-      {
-        title: "ads",
-        amount: 12434.6,
-        url: "url2"
-      }
-    ]
+    accounts: {},
+    currency: null
   }),
-  components: { Account }
+  async mounted() {
+    this.currency = await this.$store.dispatch("fetchCurrency");
+    this.accounts = await this.$store.dispatch("getFileInfo");
+    console.log(this.accounts || "main");
+  },
+
+  components: { Account, Currency }
 };
 </script>

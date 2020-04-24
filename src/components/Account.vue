@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row p4">
     <div v-for="account of accounts" :key="account.title" class="col s12 m6">
       <!--  eslint-disable-next-line prettier/prettier -->
       <div class="card blue-grey darken-1">
@@ -22,8 +22,7 @@
 export default {
   props: {
     accounts: {
-      required: true,
-      type: Array
+      required: true
     }
   }
 };

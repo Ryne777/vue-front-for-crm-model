@@ -4,7 +4,7 @@
       <NavBar></NavBar>
       <SideBar></SideBar>
     </header>
-    <main class="container">
+    <main>
       <router-view />
     </main>
     <Footer></Footer>
