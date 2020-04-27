@@ -11,12 +11,11 @@ import Currency from "../components/Currency";
 export default {
   data: () => ({
     accounts: {},
-    currency: null
+    currency: {}
   }),
   async mounted() {
     this.currency = await this.$store.dispatch("fetchCurrency");
     this.accounts = await this.$store.dispatch("getFileInfo");
-    console.log(this.accounts || "main");
   },
 
   components: { Account, Currency }

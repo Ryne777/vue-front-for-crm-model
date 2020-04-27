@@ -9,7 +9,7 @@
         </div>
         <div class="card-action">
           <!-- eslint-disable-next-line prettier/prettier -->
-          <router-link :to="{name:'account-detail', params: { url: account.url }}">
+          <router-link :to="{name:'account-detail', params: { url: account.url.split('/').pop()}}">
             <span>Детали</span>
           </router-link>
         </div>

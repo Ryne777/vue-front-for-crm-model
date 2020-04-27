@@ -14,12 +14,15 @@ export default {
       try {
         const res = await fetch("http://127.0.0.1:8000/api/v1/");
         const info = await res.json();
-        console.log(info);
+        commit("setInfo", info);
         return info;
       } catch (e) {
         commit("setError", e);
         throw e;
       }
     }
+  },
+  getters: {
+    info: s => s.info
   }
 };

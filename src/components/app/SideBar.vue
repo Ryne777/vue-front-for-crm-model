@@ -2,7 +2,7 @@
   <div>
     <ul id="slide-out" class="sidenav sidenav-fixed">
       <li>
-        <a href="#!">First Sidebar Link</a>
+        <router-link to="/">Home</router-link>
       </li>
       <li>
         <a href="#!">Second Sidebar Link</a>
