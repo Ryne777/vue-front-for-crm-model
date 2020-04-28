@@ -15,7 +15,19 @@ const routes = [
     name: "account-detail",
     meta: { layout: "main" },
     component: () => import("../views/AccountDetail.vue")
-  }
+  },
+  {
+    path: "/login/",
+    name: "Login",
+    meta: { layout: "main" },
+    component: () => import("../views/Login.vue")
+  },
+  {
+    path: "/register/",
+    name: "login",
+    meta: { layout: "main" },
+    component: () => import("../views/Register.vue")
+  },
 ];
 
 const router = new VueRouter({

@@ -1,4 +1,5 @@
 import Vue from "vue";
+import Vuelidate from 'vuelidate'
 import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
@@ -8,6 +9,7 @@ import currencyFilter from "./filters/currency.filter";
 
 Vue.config.productionTip = false;
 
+Vue.use(Vuelidate);
 Vue.filter("currency", currencyFilter);
 
 new Vue({

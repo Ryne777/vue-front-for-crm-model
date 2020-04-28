@@ -2,7 +2,12 @@ main {
     flex: 1 0 auto;
 }
 
-
+.side-icon{
+    position: absolute;
+    left: 0;
+    top: 0;    
+    margin: 17px 10px 10px 10px;
+}
 
 .main-layout {
     padding-left: 300px;
@@ -10,12 +15,12 @@ main {
     min-height: 100vh;
     flex-direction: column;
 }
-@media only screen and (min-width : 769px) {
+@media only screen and (min-width : 995px) {
     .side-icon{
         display: none;
     }
 }
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : 995px) {
     header, main, footer, .main-layout {
     padding-left: 0;    
     }    

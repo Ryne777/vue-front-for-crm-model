@@ -8,7 +8,7 @@
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
-            <a href="sass.html">Sass</a>
+            <router-link to="login">Login</router-link>
           </li>
           <li>
             <a href="badges.html">Components</a>
@@ -37,12 +37,12 @@
 </template>
 
 <script>
-import M from "materialize-css";
 export default {
   name: "navBar",
   mounted() {
     document.addEventListener("DOMContentLoaded", function() {
       var elems = document.querySelectorAll(".sidenav");
+      // eslint-disable-next-line no-undef
       M.Sidenav.init(elems, {});
     });
   }
