@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import info from "./info";
 import record from "./detail";
+import auth from "./auth";
 
 Vue.use(Vuex);
 
@@ -26,5 +27,5 @@ export default new Vuex.Store({
       return await res.json();
     }
   },
-  modules: { info, record }
+  modules: { info, record, auth }
 });

@@ -8,7 +8,12 @@
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
-            <router-link to="login">Login</router-link>
+            <div v-if="this.$store.getters.isLoggedIn">
+              <a href v-on:click="Logout">Logout</a>
+            </div>
+            <div v-else>
+              <router-link to="/login">Login</router-link>
+            </div>
           </li>
           <li>
             <a href="badges.html">Components</a>
@@ -45,6 +50,11 @@ export default {
       // eslint-disable-next-line no-undef
       M.Sidenav.init(elems, {});
     });
+  },
+  methods: {
+    Logout() {
+      this.$store.dispatch("logout");
+    }
   }
 };
 </script>
