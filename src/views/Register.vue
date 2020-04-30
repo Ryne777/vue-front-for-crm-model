@@ -11,10 +11,10 @@
                 type="text"
                 v-model.trim="email"
                 :class="{
-            invalid:
-              ($v.email.$dirty && !$v.email.required) ||
-              ($v.email.$dirty && !$v.email.email)
-          }"
+                  invalid:
+                    ($v.email.$dirty && !$v.email.required) ||
+                    ($v.email.$dirty && !$v.email.email)
+                }"
               />
               <label for="email">Email</label>
               <small
@@ -32,10 +32,10 @@
                 type="password"
                 v-model.trim="password"
                 :class="{
-            invalid:
-              ($v.password.$dirty && !$v.password.required) ||
-              ($v.password.$dirty && !$v.password.minLength)
-          }"
+                  invalid:
+                    ($v.password.$dirty && !$v.password.required) ||
+                    ($v.password.$dirty && !$v.password.minLength)
+                }"
               />
               <label for="password">{{ "Password" }}</label>
               <small

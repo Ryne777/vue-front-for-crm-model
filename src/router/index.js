@@ -29,6 +29,12 @@ const routes = [
     meta: { layout: "main" },
     component: () => import("../views/Register.vue")
   },
+  {
+    path: "/newAccount/",
+    name: "newAccount",
+    meta: { layout: "main", auth: true },
+    component: () => import("../views/NewAcc.vue")
+  },
 ];
 
 const router = new VueRouter({

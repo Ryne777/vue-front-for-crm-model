@@ -32,7 +32,7 @@ export default {
         commit("auth_request");
         await fetch("http://127.0.0.1:8000/auth/users/", {
           method: "POST",
-          mode: 'cors',
+          mode: "cors",
           headers: {
             "Content-Type": "application/json"
             // 'Content-Type': 'application/x-www-form-urlencoded',
