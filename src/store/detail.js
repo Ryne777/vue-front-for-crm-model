@@ -22,6 +22,17 @@ export default {
         commit("setError", e);
         throw e;
       }
+    },
+    // eslint-disable-next-line
+    async deleteAccountData({ dispatch, commit, }, url, method = "DELETE") {
+      try {
+        await fetch("http://127.0.0.1:8000/api/v1/" + url, {
+          method
+        });
+      } catch (e) {
+        commit("setError", e);
+        throw e;
+      }
     }
   },
   getters: {
