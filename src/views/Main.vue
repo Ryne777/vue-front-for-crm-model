@@ -14,8 +14,15 @@ export default {
     currency: {}
   }),
   async mounted() {
-    this.currency = await this.$store.dispatch("fetchCurrency");
-    this.accounts = await this.$store.dispatch("getFileInfo");
+    try {
+      this.accounts = await this.$store.dispatch("getFileInfo");
+
+      this.currency = await this.$store.dispatch("fetchCurrency");
+    } catch (e) {
+      if (e.message == 401) {
+        this.$router.push("/login");
+      }
+    }
   },
 
   components: { Account, Currency }

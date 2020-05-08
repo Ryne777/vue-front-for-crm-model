@@ -13,7 +13,12 @@ export default {
     async getAccountData({ dispatch, commit, }, url, method = "GET") {
       try {
         const res = await fetch("http://127.0.0.1:8000/api/v1/" + url, {
-          method
+          method,
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": "token " + localStorage.getItem("token")
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
         });
         const data = await res.json();
         commit("setData", data);
