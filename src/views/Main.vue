@@ -18,6 +18,7 @@ export default {
       this.accounts = await this.$store.dispatch("getFileInfo");
 
       this.currency = await this.$store.dispatch("fetchCurrency");
+      this.$message("Данные получены");
     } catch (e) {
       if (e.message == 401) {
         this.$router.push("/login");

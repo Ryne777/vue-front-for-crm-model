@@ -9,7 +9,7 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
             <div v-if="this.$store.getters.isLoggedIn">
-              <a href v-on:click="Logout">Logout</a>
+              <a href @click.prevent="logout">Logout</a>
             </div>
             <div v-else>
               <router-link to="/login">Login</router-link>
@@ -52,8 +52,9 @@ export default {
     });
   },
   methods: {
-    Logout() {
+    logout() {
       this.$store.dispatch("logout");
+      this.$router.push("/login?message=logout");
     }
   }
 };
